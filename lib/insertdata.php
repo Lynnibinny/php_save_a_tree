@@ -60,12 +60,12 @@ $ProPassword="ililil";
 
 error_log("saluuuut",3,"/var/www/i-kf.ch/SaveATree/lib/php.log");
 
-if ('POST' == $_SERVER['REQUEST_METHOD']) {
+/*if ('POST' == $_SERVER['REQUEST_METHOD']) {
     echo(ifklappt);
     if (!isset($_POST['ProMail'], $_POST['ProUserName'], $_POST['ProPicture'], $_POST['ProSavedTrees'], $_POST['ProDonated'], $_POST['ProPassword'])) {
         die ('Benutzen sie nur Formulare von der Homepage.');
     }
-    if (('' == $ProMail = $_POST['ProMail']) or 
+   if (('' == $ProMail = $_POST['ProMail']) or 
            ('' == $ProUserName = $_POST['ProUserName']) or
            ('' == $ProPicture = ($_POST['ProPicture']) or
            ('' == $ProSavedTrees = $_POST['ProSavedTrees']) or
@@ -73,7 +73,7 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
            ('' == $ProPassword = $_POST['ProPassword']) 
            )) {
        die ('Bitte füllen sie das Formular vollständig aus.');
-   }
+   }*/
     $sql = "INSERT INTO TProfile (ProMail,ProUserName, ProPicture, ProSavedTrees, ProDonated, ProPassword)
               VALUES(?,?,?,?,?,?)"; //,ProPicture,ProSavedTrees,ProDonated,ProPassword $ProUserName,$ProPicture,$ProSavedTrees,$ProDonated,$ProPassword')";
     $stmt = $db->prepare($sql);
@@ -89,7 +89,7 @@ if ('POST' == $_SERVER['REQUEST_METHOD']) {
     
      echo "hallo";
     
-}
+//}
 
     
     
