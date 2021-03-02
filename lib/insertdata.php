@@ -117,6 +117,3 @@ echo "judihui";
     
     
     ?>
-
-    highlight_file
-    
