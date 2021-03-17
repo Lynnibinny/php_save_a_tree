@@ -6,6 +6,8 @@ $username="satree_user";
 $password="Uk$12?HB7"; 
 $db_name="Save_A_Tree"; 
 
+$ProMail = $_POST["ProMail"];
+
 $db = @new mysqli($host,$username,$password,$db_name);
 if (mysqli_connect_errno()){
 	die('Keine Verbindung; '.mysqli_connect_error().'('.mysqli_connect_errno().')');
@@ -15,3 +17,10 @@ if (mysqli_connect_errno()){
 echo "judihui";
 
 ?>
+
+
+    if($conn->connect_error){
+        die("Connection Failed: " . $conn->connect_error);
+        return;
+    }
+ 
